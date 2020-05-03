@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://www.emenia.es/demos/smoda/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body style="margin:0px;padding:0px;"><script type="text/javascript">var inDapIF=!0</script><script>
+if (window.top.document.querySelectorAll('div[id*="-SKIN"]')[0]) {
+  window.top.document.querySelectorAll('div[id*="-SKIN"]')[0].style.display = 'none';
+}
+if (window.top.document.querySelectorAll('div[id*="-INTER"]')[0]) {
+  window.top.document.querySelectorAll('div[id*="-INTER"]')[0].style.display = 'none';
+}
+</script>
+
+<script>
+"use strict";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function PbsView() {
+  var _this = this;
+
+  var timer;
+  this.stageHeight = Math.max(window.top.document.documentElement.clientHeight, window.top.innerHeight || 0);
+  this.refreshTime = 40;
+  this.activeAds = [];
+  this.focused = true;
+  this.adAllowed = ['mpu1', 'mpu2', 'mpu3', 'mpu4', 'mpu5', 'mpu7', 'mpu8', 'ldb2', 'ldb3', 'ldb4', 'ldb5', 'mldb1', 'mldb2', 'mldb3', 'mldb4', 'mldb5'];
+  this.advertiserAllowed = [42843668, 13884908, 12946028, 4567984500, 37005188, 46656188, 14103308, 4462877197];
+  this.bidData = []; //this.advertiserAllowed = [Appnexus, Rubicon, Criteo, SmartAdserver, Amazon, Index, Google], RichAudience;
+  //this.advertiserAllowed = [42843668, 13884908, 12946028, 4567984500, 37005188, 46656188, 14103308, 4462877197];
+
+  this.mobilDetect = function () {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      this.refreshTime = 24;
+    }
+  };
+
+  this.init = function () {
+    var s = _this.getGptSlots();
+
+    var self = _this;
+
+    if (typeof _this.ads === 'undefined') {
+      _this.ads = {
+        running: false,
+        list: {}
+      };
+    }
+
+    for (var i = 0; i < s.length; i++) {
+      var id = _this.getGptSlotsId(s[i]);
+
+      var p = _this.getGptSlotsTargeting(s[i], 'pos');
+
+      var f = _this.getGptInformation(s[i]);
+
+      var _id = id.replace(/-/g, '__');
+
+      if (_this.adAllowed.indexOf(p) !== -1) {
+        if (f != null) {
+          if (_this.advertiserAllowed.indexOf(f.advertiserId) !== -1) {
+            _this.ads.list[_id] = {
+              second: 0,
+              id: id,
+              _id: _id,
+              slot: s[i],
+              refresh: 0,
+              advertiserId: f
+            };
+            _this.ads.list[_id].pos = p;
+          }
+        }
+      }
+    }
+
+    if (Object.keys(_this.ads.list).length > 0) {
+      _this.initScroll();
+    }
+
+    _this.mobilDetect();
+
+    window.top.googletag.pubads().addEventListener('slotRenderEnded', function (e) {
+      self.slotControl(e);
+    });
+
+    for (var index = 0; index < window.top.pbjs.adUnits.length; index++) {
+      var bid = window.top.pbjs.adUnits[index];
+      delete bid.transactionId;
+
+      _this.bidData.push(bid);
+    }
+  };
+
+  this.getGptSlots = function (e) {
+    var s = [];
+
+    if (_typeof(e) === 'object') {
+      s = window.top.googletag.pubads().getSlots(e);
+    } else {
+      s = window.top.googletag.pubads().getSlots();
+    }
+
+    return s;
+  };
+
+  this.slotControl = function (e) {
+    var id = _this.getGptSlotsId(e.slot);
+
+    var p = _this.getGptSlotsTargeting(e.slot, 'pos');
+
+    var f = _this.getGptInformation(e.slot);
+
+    var _id = id.replace(/-/g, '__');
+
+    var controlVariable = true;
+
+    for (var index = 0; index < window.top.pbjs.adUnits.length; index++) {
+      var bid = window.top.pbjs.adUnits[index];
+
+      for (var _index = 0; index < _this.bidData.length; index++) {
+        if (_this.bidData[_index].code === bid.code) {
+          controlVariable = false;
+        }
+      }
+
+      if (controlVariable) {
+        delete bid.transactionId;
+
+        _this.bidData.push(bid);
+      }
+
+      controlVariable = true;
+    }
+
+    if (_this.adAllowed.indexOf(p) !== -1) {
+      if (f != null) {
+        if (_this.ads.list.hasOwnProperty(_id) === false) {
+          if (_this.advertiserAllowed.indexOf(f.advertiserId) !== -1) {
+            _this.ads.list[_id] = {
+              second: 0,
+              id: id,
+              _id: _id,
+              slot: e.slot,
+              refresh: 0,
+              advertiserId: f
+            };
+            _this.ads.list[_id].pos = p;
+          } else if (_this.ads.list.hasOwnProperty(_id)) {
+            delete _this.ads.list[_id];
+          }
+        } else if (_this.advertiserAllowed.indexOf(f.advertiserId) !== -1) {
+          _this.ads.list[_id].second = 0;
+          _this.ads.list[_id].advertiserId = f;
+        }
+      }
+    }
+
+    if (Object.keys(_this.ads.list).length > 0 && typeof _this.initScroll === 'function') {
+      _this.initScroll();
+    }
+  };
+
+  this.setGptTargeting = function (a, b, c) {
+    a.setTargeting(b, c);
+  };
+
+  this.getGptInformation = function (a) {
+    return a.getResponseInformation();
+  };
+
+  this.clearGptTargeting = function (a, b) {
+    a.clearTargeting(b);
+  };
+
+  this.clearAllGptTargeting = function (a) {
+    a.clearTargeting();
+  };
+
+  this.getGptSlotsId = function (e) {
+    return e.getSlotElementId();
+  };
+
+  this.getGptSlotsTargeting = function (a, b) {
+    return a.getTargeting(b).toString();
+  };
+
+  this.initScroll = function () {
+    var s = _this;
+    var w = window.top;
+    w.addEventListener('scroll', s.debounce(function () {
+      s.updateElementViewabilityMessage(s);
+    }, 100));
+    w.addEventListener('focus', function () {
+      s.onFocus(s, 'on');
+    });
+    w.addEventListener('blur', function () {
+      s.onFocus(s, 'off');
+    });
+    delete _this.initScroll;
+  };
+
+  this.debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+        timeout = null;
+
+        if (!immediate) {
+          func.apply.apply(func, [_this].concat(args));
+        }
+      }, wait);
+      if (callNow) func.apply.apply(func, [_this].concat(args));
+    };
+  };
+
+  this.elementIsInView = function (e) {
+    if (window.top.document.getElementById(e)) {
+      var el = window.top.document.getElementById(e).getBoundingClientRect();
+      var elTopY = el.top + el.height / 2;
+      var elBottomY = el.top + el.height - el.height / 2;
+      return elTopY >= 0 && elBottomY < _this.stageHeight;
+    }
+
+    return false;
+  };
+
+  this.onFocus = function (a, b) {
+    if (b === 'off') {
+      _this.focused = false;
+
+      _this.clearTimer();
+
+      a.ads.running = false;
+    } else if (b === 'on') {
+      _this.focused = true;
+
+      _this.updateElementViewabilityMessage(_this);
+    }
+  };
+
+  this.removeArray = function (a, b) {
+    var i = a.indexOf(b);
+
+    if (i !== -1) {
+      a.splice(i, 1);
+    }
+  };
+
+  this.updateElementViewabilityMessage = function (e) {
+    if (typeof e.ads.list !== 'undefined') {
+      for (var a in e.ads.list) {
+        if (e.elementIsInView(e.ads.list[a].id) && e.activeAds.indexOf(e.ads.list[a]._id) === -1) {
+          e.activeAds.push(e.ads.list[a]._id);
+        } else if (!e.elementIsInView(e.ads.list[a].id) && e.activeAds.indexOf(e.ads.list[a]._id) !== -1) {
+          e.removeArray(e.activeAds, e.ads.list[a]._id);
+        }
+      }
+
+      if (e.activeAds.length > 0 && !e.ads.running && e.focused) {
+        e.ads.running = true;
+        e.setTimer();
+      } else if (e.activeAds.length === 0 && e.ads.running && !e.focused) {
+        e.ads.running = false;
+        e.clearTimer();
+      }
+    }
+  };
+
+  this.setTimer = function () {
+    var self = _this;
+    timer = setInterval(function () {
+      for (var i = 0; i < self.activeAds.length; i++) {
+        if (typeof self.ads.list[self.activeAds[i]] !== 'undefined') {
+          self.requestRefresh(self.ads.list[self.activeAds[i]]);
+          self.ads.list[self.activeAds[i]].second++;
+        }
+      }
+    }, 500);
+  };
+
+  this.clearTimer = function () {
+    clearInterval(timer);
+  };
+
+  this.getSizes = function (slotObject) {
+    var array = [];
+    slotObject.getSizes().forEach(function (element) {
+      var arr = [];
+
+      for (var obj in element) {
+        if (element.hasOwnProperty(obj)) {
+          arr.push(element[obj]);
+        }
+      }
+
+      array.push(arr);
+    });
+    return array;
+  };
+
+  this.a9 = function (e) {
+    window.top.apstag.fetchBids({
+      slots: [{
+        slotID: e.id,
+        slotName: "/".concat(e.slot.getAdUnitPath()),
+        sizes: _this.getSizes(e.slot)
+      }]
+    }, function () {
+      window.top.googletag.cmd.push(function () {
+        window.top.apstag.setDisplayBids();
+      });
+    });
+  };
+
+  this.requestRefresh = function (e) {
+    var refreshTime = _this.refreshTime;
+    var key = 'tgRotSlot';
+    var bidArray = [];
+
+    if (e.second >= refreshTime) {
+      e.second = 0;
+      e.refresh++;
+
+      _this.clearAllGptTargeting(e.slot);
+
+      _this.setGptTargeting(e.slot, key, e.refresh.toString());
+
+      _this.setGptTargeting(e.slot, 'pos', e.pos);
+
+      _this.setGptTargeting(e.slot, 'pbskey', ['scroll_infinito', 'refresh_ad']);
+
+      for (var index = 0; index < _this.bidData.length; index++) {
+        if (_this.bidData[index].code === e.id) {
+          bidArray.push(_this.bidData[index]);
+          break;
+        }
+      }
+
+      _this.a9(e);
+
+      window.top.pbjs.que.push(function () {
+        window.top.pbjs.adUnits = [];
+        window.top.pbjs.addAdUnits(bidArray);
+        window.top.pbjs.requestBids({
+          timeout: 800,
+          adUnitCodes: [e.id],
+          bidsBackHandler: function bidsBackHandler() {
+            window.top.pbjs.setTargetingForGPTAsync([e.id]);
+            window.top.googletag.pubads().refresh([e.slot]);
+          }
+        });
+      });
+
+      if (e.refresh === 6) {
+        e.refresh = 0;
+      }
+    }
+  };
+}
+
+setTimeout(function () {
+  var initView = new PbsView();
+  initView.init();
+  window.top.PBS.refresh = initView;
+}, 1000);
+</script></body></html>

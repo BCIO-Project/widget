@@ -1,0 +1,206 @@
+{
+    "id": 1,
+    "name": "Campaign Data JSON 1.0",
+    "Creation Date": 2.1341324123414322e+27,
+    "campaigns": [
+        {
+            "id": 4322,
+            "name": "Campaña 1",
+            "offers": [
+                {
+                    "id": 133,
+                    "name": "Subscribe to Pewdiepie",
+                    "description": "Just subscribe to Pewdiepie",
+                    "brandName": "Pewdipie",
+                    "image": "https://storage.googleapis.com/dni-bcio-int-images/b2d6e1f8-6174-4395-8cd1-b2c8dc0ff02f.png",
+                    "headline": "T-Gay sucks, subscribe to pewdiepie",
+                    "subtitle": "He's about to reach 100M subscribers",
+                    "offerUrl": "//elcomidista.elpais.com/agr/te_lo_llevas_fresco/a/",
+                    "kickerUrl": "https://www.youtube.com/user/PewDiePie",
+                    "kickerName": "T-Gay against Pewdipie",
+                    "kickerText": "",
+                    "kickerImg": "",
+                    "textColor": null,
+                    "backgroundColor": null,
+                    "goal": 50000,
+                    "status": "LIVE",
+                    "defaultOffer": true,
+                    "clicks": 0,
+                    "impressions": 0,
+                    "createdAt": "2019-10-29T08:40:18.175Z",
+                    "updatedAt": "2019-10-29T08:40:18.177Z",
+                    "deletedAt": null,
+                    "uuid": "e42be6a5-7214-4316-a2b1-d886e79ea69a",
+                    "segmentationTags": [],
+                    "documentationTags": [],
+                    "isComplete":false,
+                    "css_header_article": "antetitulo_comercial_espacio-eco"
+                },
+                {
+                    "id": 12,
+                    "name": "How many pokemon exits?",
+                    "description": "Just subscribe to Pewdiepie",
+                    "brandName": "Pewdipie",
+                    "image": "https://storage.googleapis.com/dni-bcio-int-images/b2d6e1f8-6174-4395-8cd1-b2c8dc0ff02f.png",
+                    "headline": "T-Gay sucks, subscribe to pewdiepie",
+                    "subtitle": "He's about to reach 100M subscribers",
+                    "offerUrl": "https://elpais.com/sociedad/2019/10/24/pienso_luego_actuo/1571910741_846126.html",
+                    "kickerUrl": "https://www.youtube.com/user/PewDiePie",
+                    "kickerName": "T-Gay against Pewdipie",
+                    "kickerText": "",
+                    "kickerImg": "",
+                    "textColor": null,
+                    "backgroundColor": null,
+                    "goal": 50000,
+                    "status": "LIVE",
+                    "defaultOffer": false,
+                    "clicks": 0,
+                    "impressions": 0,
+                    "createdAt": "2019-10-29T08:40:18.175Z",
+                    "updatedAt": "2019-10-29T08:40:18.177Z",
+                    "deletedAt": null,
+                    "uuid": "e42be6a5-7214-4316-a2b1-d886e79ea69a",
+                    "segmentationTags": [],
+                    "documentationTags": [],
+                    "isComplete": false,
+                    "css_header_article": "antetitulo_comercial_espacio-eco"
+                },
+                {
+                    "id": 12423,
+                    "name": "What does mean 42?",
+                    "description": "Answer to the Ultimate Question of Life, the Universe, and Everything",
+                    "brandName": "Pewdipie",
+                    "image": "https://storage.googleapis.com/dni-bcio-int-images/b2d6e1f8-6174-4395-8cd1-b2c8dc0ff02f.png",
+                    "headline": "T-Gay sucks, subscribe to pewdiepie",
+                    "subtitle": "He's about to reach 100M subscribers",
+                    "offerUrl": "https://elpais.com/sociedad/2019/10/24/pienso_luego_actuo/1571910741_846126.html",
+                    "kickerUrl": "https://www.youtube.com/user/PewDiePie",
+                    "kickerName": "T-Gay against Pewdipie",
+                    "kickerText": "",
+                    "kickerImg": "",
+                    "textColor": null,
+                    "backgroundColor": null,
+                    "goal": 50000,
+                    "status": "LIVE",
+                    "defaultOffer": false,
+                    "clicks": 0,
+                    "impressions": 0,
+                    "createdAt": "2019-10-29T08:40:18.175Z",
+                    "updatedAt": "2019-10-29T08:40:18.177Z",
+                    "deletedAt": null,
+                    "uuid": "e42be6a5-7214-4316-a2b1-d886e79ea69a",
+                    "segmentationTags": [],
+                    "documentationTags": [],
+                    "isComplete": false,
+                    "css_header_article": "antetitulo_comercial_espacio-eco"
+                }
+            ]
+        },
+        {
+            "id": 422,
+            "name": "Campaña 2",
+            "offers": [
+                {
+                    "id": 12423,
+                    "name": "What does mean 42?",
+                    "description": "Answer to the Ultimate Question of Life, the Universe, and Everything",
+                    "brandName": "Pewdipie",
+                    "image": "https://storage.googleapis.com/dni-bcio-int-images/b2d6e1f8-6174-4395-8cd1-b2c8dc0ff02f.png",
+                    "headline": "T-Gay sucks, subscribe to pewdiepie",
+                    "subtitle": "He's about to reach 100M subscribers",
+                    "offerUrl": "https://elpais.com/sociedad/2019/10/24/pienso_luego_actuo/1571910741_846126.html",
+                    "kickerUrl": "https://www.youtube.com/user/PewDiePie",
+                    "kickerName": "T-Gay against Pewdipie",
+                    "kickerText": "",
+                    "kickerImg": "",
+                    "textColor": null,
+                    "backgroundColor": null,
+                    "goal": 50000,
+                    "status": "LIVE",
+                    "defaultOffer": true,
+                    "clicks": 0,
+                    "impressions": 0,
+                    "createdAt": "2019-10-29T08:40:18.175Z",
+                    "updatedAt": "2019-10-29T08:40:18.177Z",
+                    "deletedAt": null,
+                    "uuid": "e42be6a5-7214-4316-a2b1-d886e79ea69a",
+                    "segmentationTags": [],
+                    "documentationTags": [],
+                    "isComplete": false,
+                    "css_header_article": "antetitulo_comercial_espacio-eco"
+                },
+                {
+                    "id": 123,
+                    "name": "mi oferta 4 espacio 4",
+                    "html": "<div style=\"height:500px; width:500px; border: 1px solid #fed\"><a href=\"https://www.google.com\">Campaña 2 id 123</a></div>",
+                    "isComplete": false
+                }
+            ]
+        }
+    ],
+    "classes": [
+        {
+            "id": 15,
+            "pageId": 8,
+            "name": "IZQUIERDA",
+            "height": 1200,
+            "width": 673,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        },
+        {
+            "id": 16,
+            "pageId": 8,
+            "name": "odd",
+            "height": 640,
+            "width": 320,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        },
+        {
+            "id": 17,
+            "pageId": 8,
+            "name": "even",
+            "height": 200,
+            "width": 600,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+                        
+        },
+        {
+            "id": 18,
+            "pageId": 8,
+            "name": "foto_w640",
+            "height": 360,
+            "width": 257,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        },
+        {
+            "id": 19,
+            "pageId": 8,
+            "name": "foto_video",
+            "height": 360,
+            "width": 257,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        },
+        {
+            "id": 20,
+            "pageId": 8,
+            "name": "foto_w360",
+            "height": 360,
+            "width": 257,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo antetitulo_comercial_generico \">\r\n            <span class=\"sin_enlace\">\r\n                {{kickerName}}\r\n            <\/span> <\/div>\r\n        <figure class=\"foto  {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\"\r\n                class=\"posicionador\">\r\n                <span class=\"boton_video\"><\/span>\r\n                <img src=\"{{image}}\" alt=\"{{headline}}\" width=\"{{width}}\" height=\"{{height}}\">\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{headline}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <p class=\"articulo-entradilla\" itemprop=\"description\">FedEx conecta personas y oportunidades.<\/p>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        },
+        {
+            "id": 21,
+            "pageId": 8,
+            "name": "foto_w1200",
+            "height": 1200,
+            "width": 673,
+            "html": "<article class=\"articulo\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/NewsArticle\" itemref=\"organizacion\">\r\n    <div class=\"articulo__interior\">\r\n        <div class=\"articulo-antetitulo {{css_header_article}} \">\r\n            <a class=\"enlace\" href=\"{{offerUrl}}\">\r\n                {{name}}\r\n            <\/a>\r\n        <\/div>\r\n        <figure class=\"foto {{css_size}}\" itemprop=\"image\" itemscope=\"\" itemtype=\"https:\/\/schema.org\/ImageObject\">\r\n            <a href=\"{{offerUrl}}\">\r\n                <img src=\"{{image}}\" alt=\"{{alt_image}}\" width=\"{{width}}\" height=\"{{height}}\" >\r\n                <meta itemprop=\"width\" content=\"{{width}}\">\r\n                <meta itemprop=\"height\" content=\"{{height}}\">\r\n                <meta itemprop=\"url\"\r\n                    content=\"{{image}}\">\r\n            <\/a>\r\n        <\/figure>\r\n        <h2 itemprop=\"headline\" class=\"articulo-titulo\">\r\n            <a href=\"{{offerUrl}}\">{{name}}<\/a>\r\n        <\/h2>\r\n        <div class=\"articulo-metadatos\">\r\n            <div class=\"articulo-datos\">\r\n            <\/div>\r\n        <\/div>\r\n        <meta itemscope=\"\" itemprop=\"mainEntityOfPage\" itemtype=\"https:\/\/schema.org\/WebPage\"\r\n            itemid=\"{{offerUrl}}\">\r\n        <meta content=\"{{createdAt}}\" itemprop=\"datePublished\">\r\n        <meta content=\"{{updatedAt}}\" itemprop=\"dateModified\">\r\n    <\/div>\r\n<\/article>"
+            
+        }
+    ]
+}
