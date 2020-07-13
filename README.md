@@ -11,7 +11,7 @@ You are currently in the **widget** part made with vanilla Javacript. To see the
 
 # Official BCIO documentation
 
-* [Technical_Implementation](https://github.com/BCIO-Project/widget/blob/master/doc/Technical_implementation.pdf)
+* [Technical Implementation](https://github.com/BCIO-Project/widget/blob/master/doc/Technical_implementation.pdf)
 * [Final User Guide](https://github.com/BCIO-Project/widget/blob/master/doc/Final_user_guide.pdf)
 
 
