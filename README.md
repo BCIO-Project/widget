@@ -9,6 +9,12 @@ This is the Branded Content Inventory Optimization project, which is a content r
 
 You are currently in the **widget** part made with vanilla Javacript. To see the project's global information read down below 
 
+# Official BCIO documentation
+
+* [Technical_Implementation](https://github.com/BCIO-Project/widget/blob/master/doc/Technical_implementation.pdf)
+* [Final User Guide](https://github.com/BCIO-Project/widget/blob/master/doc/Final_user_guide.pdf)
+
+
 # BCIO PROJECT INSTALL
 
 Bcio project has design to deploy in a GCP project. This guide will teach you how install all the components to have the BCIO solution working. There are 3 parts in this guide
